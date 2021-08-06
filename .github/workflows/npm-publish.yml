@@ -49,6 +49,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish --access public
 
+      - uses: flood-io/is-published-on-npm@v1
+        id: is-published
+
       - name: Upadate Release Tags
         uses: actions/create-release@v1
         env:
@@ -59,13 +62,7 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Get Tag For Release
-        uses: oprypin/find-latest-tag@v1
-        with:
-         repository:  MinerGreggy/maize-dashboard-satellite
-         releases-only: true
-        id: tag 
-      - run: echo "Dashboard is at version ${{ steps.tag.outputs.tag }}"
+      - run: echo "Dashboard is at version ${{ steps.is-published.outputs.version }}"
 
       - name: Download Files For Adding To The Release Assets
         uses: actions/download-artifact@v2
@@ -77,4 +74,4 @@ jobs:
         with:
           files: 'release-archive-*/*.zip'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          release-tag: ${{ steps.tag.outputs.tag }}
+          release-tag: ${{ steps.is-published.outputs.version }}
