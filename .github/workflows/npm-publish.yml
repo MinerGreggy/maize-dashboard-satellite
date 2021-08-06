@@ -40,7 +40,14 @@ jobs:
    if: "contains(github.event.head_commit.message, 'Release')"
    steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+          registry-url: 'https://registry.npmjs.org'
+      - name: Publish To NPM
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public
 
       - name: Upadate Release Tags
         uses: actions/create-release@v1
@@ -71,7 +78,3 @@ jobs:
           files: 'release-archive-*/*.zip'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           release-tag: ${{ steps.tag.outputs.tag }}
-
-
-
-
