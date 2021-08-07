@@ -1,13 +1,13 @@
 {
     "name": "maize-dashboard-satellite",
-    "version": "1.12.3",
+    "version": "1.12.4",
     "repository": "https://github.com/MinerGreggy/maize-dashboard-satellite.git",
     "bugs": "https://github.com/MinerGreggy/maize-dashboard-satellite/issues",
     "license": "GPL-3.0",
     "dependencies": {
         "axios": "^0.21.1",
         "bignumber.js": "^9.0.1",
-        "maize-api": "^2.2.4",
+        "maize-api": "^2.2.5",
         "js-yaml": "^4.1.0",
         "lodash": "^4.17.21",
         "mkdirp": "^1.0.4",

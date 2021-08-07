@@ -683,10 +683,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-maize-api-dev@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/maize-api-dev/-/maize-api-dev-2.2.4.tgz#e02c48b9cee9c8ee4dbc5f490dbf5038fb51d0b4"
-  integrity sha512-ATDsBDEGD1BDOuWvG5OWonZjPHlkO85xtFndQnpnPx6TyVJYuM3kIAr1GWY4Y3bJQYBaATjDALAb7D15rUfaBQ==
+maize-api@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/maize-api/-/maize-api-2.2.5.tgz#3ad111b39a5b538eb346073f9b5a4eea451a59eb"
+  integrity sha512-qUorEYDvJOtz1BjhLtco8ENZWjv0V2g3A2owcV4zY1isq5hTuEyer39pO01moX3l6axNEFRW17XC1BbkBD6Jlw==
   dependencies:
     json-bigint "^1.0.0"
     ws "^7.5.0"
