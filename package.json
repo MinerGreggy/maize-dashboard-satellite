@@ -1,13 +1,13 @@
 {
     "name": "maize-dashboard-satellite",
-    "version": "1.12.4",
+    "version": "1.12.6",
     "repository": "https://github.com/MinerGreggy/maize-dashboard-satellite.git",
     "bugs": "https://github.com/MinerGreggy/maize-dashboard-satellite/issues",
     "license": "GPL-3.0",
     "dependencies": {
         "axios": "^0.21.1",
         "bignumber.js": "^9.0.1",
-        "maize-api": "^2.2.5",
+        "chia-api": "^2.1.0",
         "js-yaml": "^4.1.0",
         "lodash": "^4.17.21",
         "mkdirp": "^1.0.4",
@@ -20,17 +20,17 @@
         "pkg": "^5.3.1"
     },
     "bin": {
-        "maize-dashboard-satellite": "./main.js"
+        "maize-dashboard-satellite": "./index.js"
     },
     "scripts": {
-        "start": "node main.js",
+        "start": "node index.js",
         "package": "node bin/build-package.js"
     },
-    "main": "main.js",
+    "main": "index.js",
     "engines": {
         "node": ">=12.0.0"
     },
-    "description": "maize-Api",
+    "description": "maize-dashboard-satellite for monitoring forks and chia",
     "homepage": "https://github.com/MinerGreggy/maize-dashboard-satellite#readme",
     "keywords": [
         "maize",
